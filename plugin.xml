@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-google-pay"
+    version="0.0.1">
+    <name>Google-Pay</name>
+    <description>Cordova Google Pay Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,google pay</keywords>
+    <repo>https://github.com/Goliath86/cordova-plugin-google-pay</repo>
+
+    <js-module src="www/googlepay.js" name="googlePay">
+        <clobbers target="googlePay" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GooglePay" >
+                <param name="android-package" value="com.github.goliath86.cordova.googlepay.GooglePay"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/GooglePay.java" target-dir="src/com/github/goliath86/cordova/googlepay" />
+    </platform>
+</plugin>
