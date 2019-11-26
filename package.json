@@ -14,7 +14,7 @@
     "url": "https://github.com/Goliath86/cordova-plugin-google-pay"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Goliath86/cordova-plugin-google-pay/issues"
   },
   "keywords": [
     "cordova",
@@ -30,8 +30,8 @@
   "license": "MIT",
   "engines": {
     "cordovaDependencies": {
-      "3.0.0": {
-        "cordova": ">100"
+      "0.0.1": {
+        "cordova-android": ">100"
       }
     }
   },
