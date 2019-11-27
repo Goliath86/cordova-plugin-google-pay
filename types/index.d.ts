@@ -8,7 +8,7 @@
  * This plugin defines methods to interact with the Android native Google Pay API
  */
 interface GooglePay {
-
+    getTest(successCallback: Function, errorCallback: Function): void
 }
 
 declare var googlePay: GooglePay;

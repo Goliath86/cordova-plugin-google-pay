@@ -1,19 +1,22 @@
 var argscheck = require('cordova/argscheck');
 var exec = require('cordova/exec');
-var cordova = require('cordova');
 
 /**
- * This represents the mobile device, and provides properties for inspecting the model, version, UUID of the
- * phone, etc.
+ * Class to invoke Google Pay methods on Android devices
  * @constructor
  */
 function GooglePay () {
     var me = this;
 }
 
-GooglePay.prototype.getTest = function () {
-    //argscheck.checkArgs('fF', 'GooglePay.getTest', arguments);
-    exec(function(obj) { alert(obj); }, function(err) { console.error(err); }, 'GooglePay', 'getTest', []);
+/**
+ * Retrieve a test string from the device
+ * @param successCallback Function to invoke on successfully returning from the device method invoke
+ * @param errorCallback Function to invoke on error
+ */
+GooglePay.prototype.getTest = function (successCallback, errorCallback) {
+    argscheck.checkArgs('FF', 'GooglePay.getTest', arguments);
+    exec(successCallback, errorCallback, 'GooglePay', 'getTest', []);
 };
 
 module.exports = new GooglePay();
