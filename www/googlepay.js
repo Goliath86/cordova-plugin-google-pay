@@ -11,9 +11,9 @@ function GooglePay () {
     var me = this;
 }
 
-GooglePay.prototype.getTest = function (successCallback, errorCallback) {
+GooglePay.prototype.getTest = function () {
     argscheck.checkArgs('fF', 'GooglePay.getTest', arguments);
-    exec(successCallback, errorCallback, 'GooglePay', 'getTest', []);
+    exec(function(obj) { return obj.test; }, function(err) { console.error(err); }, 'GooglePay', 'getTest', []);
 };
 
 module.exports = new GooglePay();
