@@ -13,7 +13,7 @@ function GooglePay () {
 
 GooglePay.prototype.getTest = function () {
     //argscheck.checkArgs('fF', 'GooglePay.getTest', arguments);
-    exec(function(obj) { return obj.test; }, function(err) { console.error(err); }, 'GooglePay', 'getTest', []);
+    exec(function(obj) { alert(obj); }, function(err) { console.error(err); }, 'GooglePay', 'getTest', []);
 };
 
 module.exports = new GooglePay();
